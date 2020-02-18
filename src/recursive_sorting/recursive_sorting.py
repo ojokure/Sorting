@@ -1,6 +1,6 @@
 # TO-DO: complete the helpe function below to merge 2 sorted arrays
 def merge(arrA, arrB):
-    # elements = len(arrA) + len(arrB)
+    elements = len(arrA) + len(arrB)
     # merged_arr = [0] * elements
     merged_arr = []
 
@@ -8,11 +8,10 @@ def merge(arrA, arrB):
     while len(arrA) > 0 and len(arrB) > 0:
         if arrA[0] < arrB[0]:
             sort = arrA.pop(0)
-            # merged_arr.pop(0)
         else:
             sort = arrB.pop(0)
-            # merged_arr.pop(0)
 
+        # merged_arr.pop(0)
         merged_arr.append(sort)
 
     merged_arr += arrA
@@ -33,9 +32,9 @@ def merge_sort(arr):
     arrB = merge_sort(arr[pivot:])
     print(arrB)
 
-    return merge(arrA, arrB)
+    arr = merge(arrA, arrB)
 
-    # return arr
+    return arr
 
 
 print(merge_sort([5, 6, 8, 5, 2, 7, 1, 12, 14, 20, 9, 9]))
