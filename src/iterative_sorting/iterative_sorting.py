@@ -9,9 +9,11 @@ def selection_sort(arr):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
             # TO-DO: swap
-        temp = arr[i]
-        arr[i] = arr[smallest_index]
-        arr[smallest_index] = temp
+
+            arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
+        # temp = arr[i]
+        # arr[i] = arr[smallest_index]
+        # arr[smallest_index] = temp
 
     return arr
 
@@ -26,9 +28,10 @@ def bubble_sort(arr):
         max_index = i
         for j in range(i):
             if arr[j] > arr[max_index - 1]:
-                temp = arr[j]
-                arr[j] = arr[max_index - 1]
-                arr[max_index - 1] = temp
+                arr[j], arr[max_index - 1] = arr[max_index - 1], arr[j]
+                # temp = arr[j]
+                # arr[j] = arr[max_index - 1]
+                # arr[max_index - 1] = temp
 
     return arr
 
