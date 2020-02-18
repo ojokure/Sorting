@@ -1,3 +1,6 @@
+import time
+
+
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
     # loop through n-1 elements
@@ -10,7 +13,7 @@ def selection_sort(arr):
                 smallest_index = j
             # TO-DO: swap
 
-            arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
+        arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
         # temp = arr[i]
         # arr[i] = arr[smallest_index]
         # arr[smallest_index] = temp
